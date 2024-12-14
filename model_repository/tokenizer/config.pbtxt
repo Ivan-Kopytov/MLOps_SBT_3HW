@@ -1,0 +1,22 @@
+name: "tokenizer"
+platform: "python"
+input [
+  {
+    name: "TEXT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  }
+]
+output [
+  {
+    name: "input_ids"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  },
+  {
+    name: "attention_mask"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  }
+]
+instance_group [{ kind: KIND_CPU }]
